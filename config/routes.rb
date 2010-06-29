@@ -1,6 +1,6 @@
 Sounds::Application.routes.draw do |map|
   resources :sounds
-  root :to => "sounds#index"
+  root :to => "welcome#public"
 
   devise_for :users
 
