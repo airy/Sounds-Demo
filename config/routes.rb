@@ -1,4 +1,6 @@
 Sounds::Application.routes.draw do |map|
+  resources :sounds
+
   devise_for :users
 
   # The priority is based upon order of creation:
