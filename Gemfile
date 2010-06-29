@@ -30,3 +30,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Devise : http://github.com/plataformatec/devise
 gem "devise", "1.1.rc2"
+
+# Inherited Resources : 
+gem 'inherited_resources', :git => 'git://github.com/josevalim/inherited_resources.git'
