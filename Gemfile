@@ -33,3 +33,6 @@ gem "devise", "1.1.rc2"
 
 # Inherited Resources : 
 gem 'inherited_resources', :git => 'git://github.com/josevalim/inherited_resources.git'
+
+# Paperclip :
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
