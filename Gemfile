@@ -27,3 +27,6 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # group :test do
 #   gem 'webrat'
 # end
+
+# Devise : http://github.com/plataformatec/devise
+gem "devise", "1.1.rc2"
