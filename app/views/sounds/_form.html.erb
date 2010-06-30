@@ -13,7 +13,8 @@
 
   <div class="field">
     <%= f.label :user %><br />
-    <%= f.text_field :user %>
+    <%= @sound.user || current_user %><br />
+    <%= User.current %>
   </div>
   <div class="field">
     <%= f.label :name %><br />

@@ -16,4 +16,6 @@ class User < ActiveRecord::Base
     username
   end
   
+  # sentientuser enables to access current_user in models
+  include SentientUser
 end
