@@ -1,0 +1,54 @@
+@import "settings";
+
+//############################################################
+//#       HTML5 ELEMENTS
+//############################################################
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, aside, nav, section,article { display: block; }
+
+//############################################################
+//#       ROUNDED CORNERS
+//############################################################
+
+.rounded_corners (@radius: 5px) {
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.rounded (@radius: 5px) {
+  .rounded_corners( @radius );
+}
+ 
+.center {
+  margin:0 auto 0;
+}
+
+.full {
+  width: @page_width;
+}
+
+.active_area {
+  .center;
+  .full;
+}
+
+
+
+
+//############################################################
+//#       SAMPLE CODE
+//############################################################
+
+#html {
+  @width: 960px;
+  @color: black;
+}
+
+.article { color: #294366; }
+
+.comment {
+  width: #html[@width];
+  color: .article['color']; 
+}

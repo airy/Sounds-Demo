@@ -2,5 +2,219 @@
 //#       IMPORTS
 //############################################################
 @import "settings";
+@import "helpers";
 @import "sticky_footer";
 
+//############################################################
+//#       SITE SPECIFIC CSS
+//############################################################
+
+a {
+  font-weight:bold;
+}
+
+body {
+}
+
+#main {
+    background: #colors[@yellow];
+    .center;
+    .full;
+}
+
+#wrap {
+    background-color: #B1B5B3;
+}
+
+
+#page_header {
+  .active_area;
+  height: @header_height;
+  color: #111;
+  border-top: 5px solid #colors[@yellow];
+  background: url('/images/music-notes.png') no-repeat;  
+  background-color: #colors[@white];
+
+    #user_menu {
+        background: #colors[@yellow];
+        padding:2px;
+        display:block;
+        float:right;
+        li {
+           display:inline;
+           float:left;
+           padding:5px;
+           a {
+             margin:5px;
+             text-decoration:none;
+             color: #111;
+             
+             :hover {
+               color: #111;
+               background: #colors[@one];
+             }
+           }
+        }
+    }
+}
+
+#side_panel {
+    width: @side_width;
+    float:right;
+    padding:10px;
+    
+    #app_nav {
+        #application_menu {
+            li {
+                line-height:30px;
+                display:block;
+                a {
+                    width: @side_width;
+                    height: 30px;
+                    margin:5px;
+                    text-decoration:none;
+                    color: #111;
+                    
+                    :hover {
+                        color: #colors[@white];
+                        background: #colors[@green];
+                    }
+                }
+            }
+        }
+    }
+}
+
+#notifications {
+  p {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: justify;
+    padding:20px;
+    margin:20px;
+    padding-left:70px;
+  }
+  p.notice {
+    background-image: url('/images/info.png');
+    background-repeat:  no-repeat;
+  }
+  p.alert {
+    background-image: url('/images/warning.png');
+    background-repeat:  no-repeat;
+  }
+}
+
+#page_content {
+    padding:10px;
+    display:block;
+    float:left;
+    background: #colors[@yellow];
+    width: 960px - #side_panel['width'] - (#page_content['padding'] * 2) - (#side_panel['padding'] * 2) - 1px;
+    border-right: 1px solid #colors[@white];
+    
+    color: #colors[@gray];
+    
+    header {
+        h2 {
+            padding:5px;
+            margin-bottom:10px;
+            background-color: #colors[@gray];
+            color: #colors[@yellow];
+        }
+    }
+ 
+    article {
+      margin-bottom:10px;
+      p {
+        margin-top:5px;
+        margin-bottom:5px;
+        text-align:justify;
+      }
+      footer { 
+        padding:5px; 
+        //background: #colors[@lightgray];
+       }
+
+    }
+    
+    article#welcome, article#home {
+        p { font-size:large; }
+        ul {
+            margin-left:40px;
+            line-height:25px;
+            li { 
+                font-size:large;
+                a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+#page_footer {
+  height: @footer_height;
+  background: #colors[@gray];
+}
+
+
+
+
+
+figure#developer {
+    display:block;
+    float:right;
+    margin-left:15px;
+        padding: 5px;
+        border: solid 1px #EFEFEF;
+        :hover {
+            border: solid 1px #CCC;
+            -moz-box-shadow: 1px 1px 5px #999;
+            -webkit-box-shadow: 1px 1px 5px #999;
+            box-shadow: 1px 1px 5px #999;
+        
+        }
+    
+    
+    figcaption {
+        display:block;
+    }
+    
+}
+
+
+.formelement{
+    padding:5px;
+    margin-bottom:10px;
+    font-size:large;
+}
+
+form {
+  label {
+    .formelement;
+    width:350px;
+    height:30px;
+    
+    padding:0 5 5 5;
+    color: #colors[@gray];
+  
+  }
+  
+  input[type=password], 
+  input[type=text] {
+    .formelement;
+    background-color: #colors[@green];
+    color: #colors[@white];
+    width:350px;
+    height:30px;
+  }
+
+  input[type=submit] {
+    .formelement;
+    background-color: #colors[@gray];
+    color: #colors[@white];
+    width:200px;
+    height:30px;
+  }
+  
+}
