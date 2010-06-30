@@ -1,4 +1,4 @@
-<%= form_for(@sound) do |f| %>
+<%= form_for(@sound, :html => { :multipart => true }) do |f| %>
   <% if @sound.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@sound.errors.count, "error") %> prohibited this sound from being saved:</h2>
@@ -19,6 +19,10 @@
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label 'Sound' %><br />
+    <%= f.file_field :sound %>
   </div>
   <div class="field">
     <%= f.label :description %><br />
