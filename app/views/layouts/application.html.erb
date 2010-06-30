@@ -8,6 +8,30 @@
   <%= javascript_include_tag "rails" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tag %>
+  
+
+  <%= stylesheet_link_tag "/soundmanager2/css/flashblock.css" %>
+  <%= stylesheet_link_tag "/soundmanager2/css/page-player.css" %>
+
+  <%= javascript_include_tag "/soundmanager2/script/soundmanager2-nodebug-jsmin.js" %>
+  <%= javascript_include_tag "/soundmanager2/script/flashblock.js" %>
+  <%= javascript_include_tag "/soundmanager2/script/page-player.js" %>
+  
+  <script type="text/javascript">
+    soundManager.url = '/soundmanager2/swf/';
+    soundManager.flashVersion = 9; // optional: shiny features (default = 8)
+    soundManager.useFlashBlock = true; // optionally, enable when you're ready to dive in
+    // enable HTML5 audio support, if you're feeling adventurous.
+    // soundManager.useHTML5Audio = true;
+    
+  var PP_CONFIG = {
+    flashVersion: 9,       // version of Flash to tell SoundManager to use - either 8 or 9. Flash 9 required for peak / spectrum data.
+    usePeakData: true,     // [Flash 9 only] whether or not to show peak data (no notable CPU cost)
+    useWaveformData: true  // [Flash 9 only] show raw waveform data. WARNING: Experimental, likely CPU-heavy
+  }
+    
+  </script>  
+  
 </head>
 <body>
    <div id="wrap">

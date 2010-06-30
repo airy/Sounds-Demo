@@ -11,8 +11,9 @@
 
 
 <p>
-  <b>Media:</b>
-  <audio src="@sound.media" controls autobuffer></audio>
+ <ul class="playlist">
+    <li><a href="<%= @sound.sound %>">Listen <%= @sound.name %></a></li>
+  </ul>
 </p>
 
 
@@ -29,3 +30,33 @@
 
 
 <% end %>
+
+<div id="sm2-container"> 
+<!-- SM2 flash movie goes here --> 
+</div> 
+
+<div id="control-template">
+  <!-- control markup inserted dynamically after each link -->
+  <div class="controls">
+   <div class="statusbar">
+    <div class="loading"></div>
+     <div class="position"></div>
+   </div>
+  </div>
+  <div class="timing">
+
+   <div id="sm2_timing" class="timing-data">
+    <span class="sm2_position">%s1</span> / <span class="sm2_total">%s2</span></div>
+  </div>
+  <div class="peak">
+   <div class="peak-box"><span class="l"></span><span class="r"></span>
+   </div>
+  </div>
+
+ </div>
+
+ <div id="spectrum-container" class="spectrum-container" style="display:none;">
+        <div class="spectrum-box">
+                <div class="spectrum"></div>
+        </div>
+</div> 
