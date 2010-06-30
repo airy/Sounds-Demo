@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/sentient_user"]
+	path = vendor/plugins/sentient_user
+	url = git://github.com/bokmann/sentient_user.git
