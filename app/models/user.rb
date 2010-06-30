@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :username
   
+  validates :email, :uniqueness => {:case_sensitive => false}
+  
   validates :username, :presence => true, :length => {:minimum => 4},
     :uniqueness => {:case_sensitive => false}, :format => { :with => /[A-Za-z0-9]+/ }
   
