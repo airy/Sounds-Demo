@@ -1,20 +1,31 @@
-<p id="notice"><%= notice %></p>
+<%= content_tag_for :article, @sound do %>
+<header>
+    <h2><%= @sound.name %></h2>
+    <section id="functions">
+    <%= link_to 'Back', sounds_path %> |
+    <%= link_to 'Edit', edit_sound_path(@sound) %> |
+    <%= link_to 'Destroy', @sound, :confirm => 'Are you sure?', :method => :delete %>
+
+    </section>
+</header>
+
 
 <p>
-  <b>User:</b>
-  <%= @sound.user %>
+  <b>Media:</b>
+  <audio src="@sound.media" controls autobuffer></audio>
 </p>
 
-<p>
-  <b>Name:</b>
-  <%= @sound.name %>
-</p>
 
-<p>
-  <b>Description:</b>
+<p class="description">
   <%= @sound.description %>
 </p>
 
 
-<%= link_to 'Edit', edit_sound_path(@sound) %> |
-<%= link_to 'Back', sounds_path %>
+
+
+<footer>
+    added by <%= @sound.user %> <%= time_ago_in_words(@sound.created_at) %> ago
+</footer>
+
+
+<% end %>

@@ -1,27 +1,12 @@
-<h1>Listing sounds</h1>
-
-<table>
-  <tr>
-    <th>User</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<header><h2>Listing sounds</h2></header>
 
 <% @sounds.each do |sound| %>
-  <tr>
-    <td><%= sound.user %></td>
-    <td><%= sound.name %></td>
-    <td><%= sound.description %></td>
-    <td><%= link_to 'Show', sound %></td>
-    <td><%= link_to 'Edit', edit_sound_path(sound) %></td>
-    <td><%= link_to 'Destroy', sound, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <%= content_tag_for :article, sound do %>
+    <header>
+        <h3><%= link_to sound.name, sound %></h3>
+    </header>
+  <% end %>
 <% end %>
-</table>
-
 <br />
 
 <%= link_to 'New Sound', new_sound_path %>
