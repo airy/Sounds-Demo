@@ -15,7 +15,6 @@
 
   <%= javascript_include_tag "/soundmanager2/script/soundmanager2-nodebug-jsmin.js" %>
   <%= javascript_include_tag "/soundmanager2/script/flashblock.js" %>
-  <%= javascript_include_tag "/soundmanager2/script/page-player.js" %>
   
   <script type="text/javascript">
     soundManager.url = '/soundmanager2/swf/';
@@ -27,10 +26,12 @@
   var PP_CONFIG = {
     flashVersion: 9,       // version of Flash to tell SoundManager to use - either 8 or 9. Flash 9 required for peak / spectrum data.
     usePeakData: true,     // [Flash 9 only] whether or not to show peak data (no notable CPU cost)
-    useWaveformData: true  // [Flash 9 only] show raw waveform data. WARNING: Experimental, likely CPU-heavy
+    useWaveformData: true,  // [Flash 9 only] show raw waveform data. WARNING: Experimental, likely CPU-heavy
+    useFavIcon: true      // try to show peakData in address bar (Firefox + Opera) - requires usePeakData = true too, of course.
   }
     
   </script>  
+  <%= javascript_include_tag "/soundmanager2/script/page-player.js" %>
   
 </head>
 <body>

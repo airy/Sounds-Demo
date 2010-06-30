@@ -73,7 +73,7 @@ ul.playlist li a {
  text-decoration:none;
  font-weight:normal;
  color:#000;
- font-size:120%;
+ /*font-size:120%;*/
  outline:none;
  position:relative;
  z-index:2;
