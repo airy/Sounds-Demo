@@ -36,3 +36,6 @@ gem 'inherited_resources', :git => 'git://github.com/josevalim/inherited_resourc
 
 # Paperclip :
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
+
+# Less : http://lesscss.org/
+gem "less"
