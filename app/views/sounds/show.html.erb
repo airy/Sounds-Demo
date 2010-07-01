@@ -1,6 +1,8 @@
 <%= content_tag_for :article, @sound do %>
 <header>
-    <h2><%= @sound.name %></h2>
+ <ul class="playlist airy">
+    <li><a href="<%= @sound.sound %>"><h2><%= @sound.name %></h2></a></li>
+  </ul>
     <section id="functions">
     <%= link_to 'Back', sounds_path %> |
     <%= link_to 'Edit', edit_sound_path(@sound) %> |
@@ -11,9 +13,6 @@
 
 
 <p>
- <ul class="playlist">
-    <li><a href="<%= @sound.sound %>"><%= @sound.name %></a></li>
-  </ul>
 </p>
 
 

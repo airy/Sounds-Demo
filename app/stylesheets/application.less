@@ -137,6 +137,15 @@ body {
 
     }
     
+    article.sound {
+        header {
+            h2{
+                padding:0;
+                margin:0;
+                background:none;
+            }
+        }
+    }
     article#welcome, article#home {
         p { font-size:large; }
         ul {
@@ -217,4 +226,95 @@ form {
     height:30px;
   }
   
+}
+
+
+
+
+//############################################################
+//#       PLAYER CUSTOMIZATIONS
+//############################################################
+
+
+ul.playlist.airy li {
+ background: #colors[@gray];
+ border-radius:3px;
+ -moz-border-radius:3px;
+ -webkit-border-radius:3px;
+} 
+
+ul.playlist.airy li a h2 { 
+ font-size:1em;
+
+}
+
+ul.playlist.airy li.sm2_paused,
+ul.playlist.airy li.sm2_paused:hover {
+ background-color: #colors[@gray];
+}
+
+ul.playlist.airy li.sm2_paused a,
+ul.playlist.airy li.sm2_paused:hover a,
+ul.playlist.airy li.sm2_paused .timing,
+ul.playlist.use-peak.airy li.sm2_paused .peak {
+    /*color: #colors[@green];*/
+}
+
+ul.playlist.airy li:hover {
+ background: #colors[@gray];
+ a{
+  color: #colors[@white];
+
+ }
+ 
+}
+
+ul.playlist.airy li.sm2_playing,
+ul.playlist.airy li.sm2_playing:hover {
+ background-color:#colors[@gray];
+ a {
+    color: #colors[@white];
+ }
+}
+
+ul.playlist.airy li .controls {
+ background-color:transparent;
+}
+
+ul.playlist.airy li .controls .statusbar {
+ background-color: #colors[@gray];
+ border-color: #colors[@gray];
+}
+
+ul.playlist.airy li .controls .statusbar .position {
+ background-color:#ffaacc;
+ border-right:3px solid #ffaacc;
+ border-radius:3px;
+ -moz-border-radius:3px;
+ -webkit-border-radius:3px;
+}
+
+ul.playlist.airy li .controls .statusbar .loading {
+ background-color:#ffeedd;
+}
+
+ul.playlist.airy li .timing,
+ul.playlist.use-peak.airy li .peak {
+ background-color:#ffaacc;
+ border-color:#ffccee;
+}
+
+ul.playlist.use-spectrum.airy li.sm2_playing .spectrum-container {
+ background-color:#ffaacc;
+ border-color:#ffccee;
+}
+
+ul.playlist.use-spectrum.airy li.sm2_playing .spectrum-container .spectrum {
+ background-color:#fff;
+}
+
+ul.playlist.airy.use-peak li .peak .l,
+ul.playlist.airy.use-peak li .peak .r {
+ border-color:#fff;
+ background-color:#fff;
 }
