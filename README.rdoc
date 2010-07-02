@@ -1,0 +1,58 @@
+== Sounds-Demo
+
+Sounds Demo is a demo application to store & playback sounds files.
+
+It's been developing with
+
+* Rails 3.0.0.beta4 (http://github.com/rails/rails);
+* Devise (http://github.com/plataformatec/devise);
+* Inherited Resources (http://github.com/josevalim/inherited_resources);
+* Paperclip (http://github.com/thoughtbot/paperclip);
+* SentientUser (http://github.com/bokmann/sentient_user);
+* Jquery-ujs (http://github.com/rails/jquery-ujs);
+* Less (http://github.com/cloudhead/less);
+* SoundManager2 (http://github.com/scottschiller/SoundManager2);
+
+== Installation
+
+Clone the application from github:
+
+  git clone git://github.com/airy/Sounds-Demo.git
+
+Install gem dependencies with bundler:
+
+  bundle install
+
+Run task to download latest jquery-ujs in project directory
+
+  rake sounds:setup
+
+Rename database.yml.sample to database.yml under config directory
+
+  mv config/database.yml.sample config/database.yml
+
+Run database create & migrate tasks
+
+  rake db:create db:migrate
+
+Start the web server
+
+  rails s
+
+Now you can check the demo. Open your web browser and go to http://localhost:3000 .
+  
+== TODO
+
+* Tests will be added.
+* Ajax functionality will be added.
+* Mailer setup will be added.
+
+== Bugs and Feedback
+
+If you discover any bugs, please create an issue on GitHub.
+
+http://github.com/airy/Sounds-Demo/issues
+
+== License
+
+MIT License. Copyright 2010 airy. http://github.com/airy
