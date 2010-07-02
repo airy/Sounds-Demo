@@ -1,0 +1,111 @@
+--- 
+hash: 6cd027a8687553c3fa1075c25c3ab064be06f939
+sources: 
+- Git: 
+    git: git://github.com/thoughtbot/paperclip.git
+    uri: git://github.com/thoughtbot/paperclip.git
+    ref: 71500168e41e4f8a3e921a6de602603e01098a95
+- Git: 
+    git: git://github.com/josevalim/inherited_resources.git
+    uri: git://github.com/josevalim/inherited_resources.git
+    ref: 9e105b4309f2cf457778a586ae9db60c7630cf07
+- Rubygems: 
+    uri: http://rubygems.org
+specs: 
+- rake: 
+    version: 0.8.7
+- abstract: 
+    version: 1.0.0
+- activesupport: 
+    version: 3.0.0.beta4
+- builder: 
+    version: 2.1.2
+- i18n: 
+    version: 0.4.1
+- activemodel: 
+    version: 3.0.0.beta4
+- erubis: 
+    version: 2.6.6
+- rack: 
+    version: 1.1.0
+- rack-mount: 
+    version: 0.6.6
+- rack-test: 
+    version: 0.5.4
+- tzinfo: 
+    version: 0.3.22
+- actionpack: 
+    version: 3.0.0.beta4
+- mime-types: 
+    version: "1.16"
+- polyglot: 
+    version: 0.3.1
+- treetop: 
+    version: 1.4.8
+- mail: 
+    version: 2.2.5
+- actionmailer: 
+    version: 3.0.0.beta4
+- arel: 
+    version: 0.4.0
+- activerecord: 
+    version: 3.0.0.beta4
+- activeresource: 
+    version: 3.0.0.beta4
+- bcrypt-ruby: 
+    version: 2.1.2
+- bundler: 
+    version: 0.9.26
+- warden: 
+    version: 0.10.7
+- devise: 
+    version: 1.1.rc2
+- has_scope: 
+    version: 0.5.0
+- responders: 
+    version: 0.6.1
+- inherited_resources: 
+    version: 1.1.2
+    source: 1
+- mutter: 
+    version: 0.5.3
+- less: 
+    version: 1.2.21
+- paperclip: 
+    version: 2.3.3
+    source: 0
+- thor: 
+    version: 0.13.7
+- railties: 
+    version: 3.0.0.beta4
+- rails: 
+    version: 3.0.0.beta4
+- sqlite3-ruby: 
+    version: 1.3.0
+dependencies: 
+  rails: 
+    version: = 3.0.0.beta4
+    group: 
+    - :default
+  sqlite3-ruby: 
+    version: ">= 0"
+    group: 
+    - :default
+    require: 
+    - sqlite3
+  devise: 
+    version: = 1.1.rc2
+    group: 
+    - :default
+  inherited_resources: 
+    version: ">= 0"
+    group: 
+    - :default
+  paperclip: 
+    version: ">= 0"
+    group: 
+    - :default
+  less: 
+    version: ">= 0"
+    group: 
+    - :default
