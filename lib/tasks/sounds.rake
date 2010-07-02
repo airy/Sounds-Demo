@@ -3,10 +3,16 @@ namespace :sounds do
   task :css do
     system "lessc app/stylesheets/application.less public/stylesheets/application.css"
   end
+
+  desc "Downloads rails-ujs from github"
+  task :ujs  do
+    system "wget http://github.com/rails/jquery-ujs/raw/master/src/rails.js -P public/javascripts/"
+  end
+
   
-  desc "Runs css & rails-ujs tasks"
+  desc "Runs css & ujs tasks"
   task :setup do
-    system "rake jquery:install"
+    system "rake sounds:ujs"
     system "rake sounds:css"
   end
   
